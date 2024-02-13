@@ -1,0 +1,83 @@
+/*********************************************
+  HEADER
+*********************************************/
+
+// activation burger -> 900
+
+.header {
+  width: 100vw;
+  height: 100px;
+  padding: 20px 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  > div {
+
+    > .logo {
+      width: 100px;
+      user-select: none;
+      pointer-events: none;
+    }
+  }
+
+  .navContainer {
+    right: 50px;
+    position: fixed;
+    z-index: 200;
+    width: fit-content;
+    height: 50px;
+    padding: 0 10px;
+    background-color: transparent;
+    border-radius: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    transition: background-color $ease .3s;
+
+    > li {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      > a {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        color: rgba($white, .5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px;
+        font-weight: 600;
+        background-color: transparent;
+
+        transition: color $ease .3s;
+
+        &.current, &:hover {
+          color: $white;
+        }
+      }
+
+      &.active > a {
+        color: $white;
+      }
+    }
+
+    &.active {
+      background-color: rgba(#000, 1);
+      border: 2px solid rgba($white, .05);
+    }
+
+    > img {
+      width: $large;
+      fill: rgba($white, .5);
+    }
+  }
+}

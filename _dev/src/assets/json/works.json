@@ -1,0 +1,40 @@
+{
+  "internship": [
+    {
+      "name": "Dessouroux",
+      "description": "Dessouroux is a website I developed during my internship using CMSMS javascript and scss.",
+      "src": "/images/works/dessouroux-screen.jpeg",
+      "url": "https://huissier-dessouroux.be/",
+      "techno": [
+        "cmsms",
+        "scss",
+        "JQuery"
+      ]
+    },
+    {
+      "name": "Lehub",
+      "description": "I was able to work on several pages and features of lehub.",
+      "src": "/images/works/lehub-screen.png",
+      "url": "https://lehub.be/",
+      "techno": [
+        "cmsms",
+        "scss",
+        "JQuery"
+      ]
+    },
+    {
+      "name": "Catsitter",
+      "description": "During my internship, I developed some features and pages on catsitter using laravel, vuejs and scss.",
+      "src": "/images/works/catsitter-screen.png",
+      "url": "https://catsitter.lu",
+      "techno": [
+        "laravel 8",
+        "scss",
+        "vuejs 3"
+      ]
+    }
+  ],
+  "personal": [
+
+  ]
+}

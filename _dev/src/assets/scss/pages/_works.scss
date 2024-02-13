@@ -1,0 +1,206 @@
+/*********************************************
+  HOME
+*********************************************/
+
+.works {
+  width: 100%;
+
+  > .container {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: $white;
+  }
+
+  .internship, .personal {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    > .fixedContainer {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      > article {
+        width: 100%;
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 20px;
+
+        position: sticky;
+        top: 0;
+
+        > p {
+          font-weight: 900;
+          font-size: $xxx-large;
+        }
+
+        > div {
+          width: 100%;
+          display: flex;
+          align-items: center;
+
+          &:first-child {
+            justify-content: flex-start;
+
+            > img {
+              width: $xx-large;
+              height: $xx-large;
+            }
+          }
+
+          &:last-child {
+            justify-content: space-between;
+
+            > hr {
+              width: auto;
+              height: 1px;
+              background-color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    > ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-start;
+      gap: 200px;
+
+      > li {
+        width: 500px;
+        height: 300px;
+
+        > a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          border-radius: 20px;
+          overflow: hidden;
+          border: 2px solid rgba($black, .1);
+          transform: perspective(1000px);
+          transform-style: preserve-3d;
+
+          > img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+
+          > ul {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+
+            transform: translateZ(80px);
+
+            > li {
+              padding: 2px 15px;
+              background-color: $black;
+              border-radius: 100px;
+              color: $white;
+              font-weight: bold;
+              text-transform: uppercase;
+              font-size: $small;
+            }
+          }
+
+          > div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            padding: 20px;
+            transform: translateZ(40px);
+
+            transition: background-color $ease .3s;
+            transition-delay: .15s;
+
+            > p {
+              position: relative;
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              gap: 8px;
+
+              font-size: $large;
+              font-weight: 900;
+              text-transform: none;
+              color: $white;
+
+              > .mask {
+                overflow: hidden;
+                display: inline-flex;
+                position: relative;
+
+                > span {
+                  white-space: nowrap;
+
+                  transform: translateY(100px);
+
+                  transition: transform $ease .3s;
+                }
+              }
+            }
+
+            }
+
+          > a {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background-color: $black;
+            width: 50px;
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100px;
+            border: 2px solid rgba($white, .05);
+
+            transition: border-color $ease .3s;
+
+            &:hover {
+              border-color: $white;
+            }
+          }
+
+          &:hover {
+
+            > div {
+              background-color: rgba($black, .85);
+              transition-delay: 0s;
+
+              > p > .mask > span {
+                transform: translateY(0);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

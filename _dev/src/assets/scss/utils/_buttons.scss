@@ -1,0 +1,104 @@
+/*********************************************
+  BUTTONS
+*********************************************/
+
+// - button, default, green primary
+.button {
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  background-color: transparent;
+
+  overflow: hidden;
+
+  transition: color $ease .3s;
+
+  > span {
+    position: relative;
+    z-index: 10;
+  }
+
+  > svg {
+    position: relative;
+    z-index: 10;
+    width: $normal;
+    height: $normal;
+    opacity: 0;
+    transform: translateX(-20px);
+
+    transition: opacity $ease .3s, transform $ease .3s;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 200%;
+    aspect-ratio: 1/1;
+    border-radius: 200px;
+    transform: scale(0);
+    transform-origin: 150% 50%;
+
+    transition: transform $ease .5s;
+  }
+
+  &--black {
+    color: $black;
+
+    > svg {
+      fill: $black;
+    }
+
+    &:after {
+      background-color: $black;
+    }
+
+    &:hover {
+      color: $white;
+
+      > svg {
+        fill: $white;
+      }
+    }
+  }
+
+  &--white {
+    color: $white;
+
+    > svg {
+      fill: $white;
+    }
+
+    &:after {
+      background-color: $white;
+    }
+
+    &:hover {
+      color: $black;
+
+      > svg {
+        fill: $black;
+      }
+    }
+  }
+
+  &:hover {
+
+    &:after {
+      transform: scale(1);
+      transform-origin: 0 50%;
+    }
+
+    > svg {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}

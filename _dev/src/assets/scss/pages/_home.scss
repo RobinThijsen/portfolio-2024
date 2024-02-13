@@ -1,0 +1,74 @@
+/*********************************************
+  HOME
+*********************************************/
+
+.home {
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: $white;
+    font-size: $xxxxx-large;
+    font-weight: bold;
+    text-transform: none;
+    max-width: 1000px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    > .typingContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 10px;
+      height: 50px;
+      margin-top: 30px;
+
+      > span {
+        color: $white;
+        font-size: $xxxxx-large;
+        font-weight: bold;
+        text-transform: none;
+        height: 100%;
+      }
+
+      > div {
+        width: 30px;
+        height: 5px;
+        background-color: $white;
+      }
+    }
+  }
+
+  > .scroll {
+    position: absolute;
+    bottom: -115px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: $white;
+    font-size: $small;
+    font-weight: bold;
+    letter-spacing: .5px;
+    text-transform: none;
+
+    > svg {
+      fill: $white;
+      width: $normal;
+      height: $normal;
+    }
+  }
+}

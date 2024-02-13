@@ -1,0 +1,23 @@
+// settings
+@import "settings/colors";
+@import "settings/fonts";
+
+// generic
+@import "generic/mediaqueries";
+@import "generic/reset";
+
+// utils
+@import "utils/buttons";
+@import "utils/commons";
+@import "utils/transitions";
+
+// partials
+@import "partials/preloader";
+@import "partials/header";
+@import "partials/footer";
+
+// pages
+@import "pages/default";
+@import "pages/home";
+@import "pages/works";
+@import "pages/about";
