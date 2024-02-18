@@ -1,0 +1,154 @@
+{
+  "languages": [
+    {
+      "id": null,
+      "backgroundColor": "#FFF",
+      "fillColor": "#OOO",
+      "path": null
+    },
+    {
+      "id": null,
+      "backgroundColor": "#FFF",
+      "fillColor": "#1C1C1C",
+      "path": null
+    },
+    {
+      "id": "html",
+      "backgroundColor": "#FFF",
+      "fillColor": "#E44F26",
+      "path": "html"
+    },
+    {
+      "id": "scss",
+      "backgroundColor": "#FFF",
+      "fillColor": "#CF649A",
+      "path": "scss"
+    },
+    {
+      "id": "javascript",
+      "backgroundColor": "#1C1C1C",
+      "fillColor": "#F0E94B",
+      "path": "js"
+    },
+    {
+      "id": "php",
+      "backgroundColor": "#FFF",
+      "fillColor": "#777BB3",
+      "path": "php"
+    }
+  ],
+  "frameworks": [
+    {
+      "id": null,
+      "backgroundColor": "#FFF",
+      "fillColor": "#1C1C1C",
+      "path": null
+    },
+    {
+      "id": null,
+      "backgroundColor": "#FFF",
+      "fillColor": "#1C1C1C",
+      "path": null
+    },
+    {
+      "id": "laravel",
+      "backgroundColor": "#1C1C1C",
+      "fillColor": "#E53B3B",
+      "path": "laravel"
+    },
+    {
+      "id": "react",
+      "backgroundColor": "#FFF",
+      "fillColor": "#4F8DEB",
+      "path": "react"
+    },
+    {
+      "id": "nextjs",
+      "backgroundColor": "#1C1C1C",
+      "fillColor": "#FFF",
+      "path": "next"
+    },
+    {
+      "id": "vuejs",
+      "backgroundColor": "#FFF",
+      "fillColor": "#41B883",
+      "path": "vue"
+    }
+  ],
+  "others": [
+    {
+      "id": null,
+      "backgroundColor": "#FFF",
+      "fillColor": "#1C1C1C",
+      "path": null
+    },
+    {
+      "id": "xd",
+      "backgroundColor": "#FFF",
+      "fillColor": "",
+      "path": "xd"
+    },
+    {
+      "id": "prestashop",
+      "backgroundColor": "#FFF",
+      "fillColor": "",
+      "path": "prestashop"
+    },
+    {
+      "id": "wordpress",
+      "backgroundColor": "#FFF",
+      "fillColor": "#1C1C1C",
+      "path": "wordpress"
+    },
+    {
+      "id": "gsap",
+      "backgroundColor": "#FFF",
+      "fillColor": "",
+      "path": "gsap"
+    }
+  ],
+  "tools": [
+    {
+      "id": null,
+      "backgroundColor": "#FFF",
+      "fillColor": "#1C1C1C",
+      "path": null
+    },
+    {
+      "id": "framer",
+      "backgroundColor": "#FFF",
+      "fillColor": "",
+      "path": "framer"
+    },
+    {
+      "id": "github",
+      "backgroundColor": "#1C1C1C",
+      "fillColor": "#FFF",
+      "path": "github"
+    },
+    {
+      "id": "docker",
+      "backgroundColor": "#FFF",
+      "fillColor": "#5E7FF5",
+      "path": "docker"
+    },
+    {
+      "id": "figma",
+      "backgroundColor": "#1C1C1C",
+      "fillColor": "",
+      "path": "figma"
+    },
+    {
+      "id": null,
+      "backgroundColor": "#FFF",
+      "fillColor": "#1C1C1C",
+      "path": null
+    },
+    {
+      "id": null,
+      "backgroundColor": "#FFF",
+      "fillColor": "#1C1C1C",
+      "path": null
+    }
+  ]
+}

@@ -20,6 +20,14 @@
     text-transform: none;
     max-width: 1000px;
 
+    @include w1024-down {
+      font-size: $xxx-large;
+    }
+
+    @include w600-down {
+      font-size: $x-large;
+    }
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -34,18 +42,46 @@
       height: 50px;
       margin-top: 30px;
 
+      @include w1024-down {
+        margin-top: 15px;
+        height: 35px;
+      }
+
+      @include w600-down {
+        margin-top: 5px;
+        height: 25px;
+      }
+
       > span {
         color: $white;
         font-size: $xxxxx-large;
         font-weight: bold;
         text-transform: none;
         height: 100%;
+
+        @include w1024-down {
+          font-size: $xxx-large;
+        }
+
+        @include w600-down {
+          font-size: $x-large;
+        }
       }
 
       > div {
         width: 30px;
         height: 5px;
         background-color: $white;
+
+        @include w1024-down {
+          width: 25px;
+          height: 3px;
+        }
+
+        @include w600-down {
+          width: 15px;
+          height: 3px;
+        }
       }
     }
   }
@@ -64,6 +100,14 @@
     font-weight: bold;
     letter-spacing: .5px;
     text-transform: none;
+
+    @include w1024-down {
+      bottom: -35px;
+    }
+
+    @include w600-down {
+      bottom: 20px;
+    }
 
     > svg {
       fill: $white;

@@ -21,7 +21,7 @@ export const workAnimation = (workContainerRef: gsap.TweenTarget, workWrapperRef
             trigger: "section.works",
             scrub: true,
             start: "top 80%",
-            end: "20% bottom"
+            end: "40% bottom"
         }
     })
 
@@ -31,7 +31,7 @@ export const workAnimation = (workContainerRef: gsap.TweenTarget, workWrapperRef
             trigger: "section.works",
             scrub: true,
             start: "top 80%",
-            end: "25% bottom"
+            end: "45% bottom"
         }
     })
 }

@@ -3,7 +3,7 @@
     {
       "name": "Dessouroux",
       "description": "Dessouroux is a website I developed during my internship using CMSMS javascript and scss.",
-      "src": "/images/works/dessouroux-screen.jpeg",
+      "src": "works/dessouroux-screen.jpeg",
       "url": "https://huissier-dessouroux.be/",
       "techno": [
         "cmsms",
@@ -14,7 +14,7 @@
     {
       "name": "Lehub",
       "description": "I was able to work on several pages and features of lehub.",
-      "src": "/images/works/lehub-screen.png",
+      "src": "works/lehub-screen.png",
       "url": "https://lehub.be/",
       "techno": [
         "cmsms",
@@ -25,7 +25,7 @@
     {
       "name": "Catsitter",
       "description": "During my internship, I developed some features and pages on catsitter using laravel, vuejs and scss.",
-      "src": "/images/works/catsitter-screen.png",
+      "src": "works/catsitter-screen.png",
       "url": "https://catsitter.lu",
       "techno": [
         "laravel 8",
@@ -35,6 +35,27 @@
     }
   ],
   "personal": [
-
+    {
+      "name": "Tic-Tac-Toe",
+      "description": "A little html scss js exercise I did to train me in vanilla javascript.",
+      "src": "works/tic-tac-toe.png",
+      "url": "https://projects.robinthijsen.me/tic-tac-toe/",
+      "techno": [
+        "html",
+        "scss",
+        "javascript"
+      ]
+    },
+    {
+      "name": "Portfolio 2024",
+      "description": "This is my portfolio I made during 2023 using scss and React.",
+      "src": "works/portfolio-v-23.png",
+      "url": "https://robin.thijsen.net/",
+      "techno": [
+        "html",
+        "scss",
+        "React"
+      ]
+    }
   ]
 }

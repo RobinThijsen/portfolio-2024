@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useRef } from "react"
 import emailjs from '@emailjs/browser'
 
 import { Magnetic } from "../Magnetic.tsx"
@@ -18,6 +18,7 @@ export const FormContainer = () => {
             target.classList.add('js-active')
         }
 
+        // @ts-ignore
         emailjs.sendForm('service_6pj428a', 'template_je2fcil', form.current, 'oqrTqVziPb3Bce_Rf')
             .then((result) => {
                 console.log(result.text);
@@ -26,11 +27,13 @@ export const FormContainer = () => {
             });
     }
 
-    return <section className="formContainer">
+    // @ts-ignore
+    return <section className="formContainer" id="contact">
         <p>
-                If you're interested in my services, if you're looking for a web developer full-stack<br />
-                or if you just want to write to me, you can contact me using this form.
+            If you're interested in my services, if you're looking for a web developer full-stack<br />
+            or if you just want to write to me, you can contact me using this form.
         </p>
+        {/* @ts-ignore */}
         <form ref={ form } onSubmit={ sendEmail }>
             <fieldset>
                 <input id="surname" type="text" name="user_surname" placeholder="Surname" />

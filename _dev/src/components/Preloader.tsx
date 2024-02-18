@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 export const Preloader = () => {
     const [dimension, setDimension] = useState({ width: 0, height: 0 })
-    const phrase: string = "Welcome to my portfolio !"
+    const phrase: string = "Robin Thijsen"
 
     useEffect(() => {
         setDimension({ width: window.innerWidth, height: window.innerHeight })
@@ -26,9 +26,9 @@ export const Preloader = () => {
     return <motion.div variants={ slideUp } className="preloader" initial="intial" exit="exit">
         {dimension.height > 0 && <>
             <p className="title">
-                {phrase.split(" ").map((word: string, index: number) => <span key={ index } className="mask">
+                {phrase.split("").map((word: string, index: number) => <span key={ index } className="mask">
                     <motion.span custom={ index } variants={ slideUpText } initial="initial" animate="enter">
-                        { word }
+                        { word == " " ? <span className="space"></span> : word }
                     </motion.span>
                 </span>)}
             </p>

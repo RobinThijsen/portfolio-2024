@@ -58,7 +58,7 @@ body {
 // --- MAIN
 main { // global page
 	position: relative; // safety hide overflow
-	overflow: hidden; // horiz scroll
+	//overflow-y: hidden;
 	min-height: 600px;
 }
 

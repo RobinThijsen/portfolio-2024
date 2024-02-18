@@ -20,6 +20,10 @@
     padding-top: 50px;
     padding-bottom: 50px;
 
+    @include w1024-down {
+      grid-template-columns: 1fr;
+    }
+
     > .fixedContainer {
       width: 100%;
       height: 100%;
@@ -28,7 +32,6 @@
       > article {
         width: 100%;
         padding-top: 100px;
-        padding-bottom: 100px;
 
         display: flex;
         flex-direction: column;
@@ -42,6 +45,10 @@
         > p {
           font-weight: 900;
           font-size: $xxx-large;
+
+          @include w600-down {
+            font-size: $x-large;
+          }
         }
 
         > div {
@@ -61,10 +68,10 @@
           &:last-child {
             justify-content: space-between;
 
-            > hr {
-              width: auto;
+            > .line {
+              width: 60%;
               height: 1px;
-              background-color: $white;
+              background-color: $black;
             }
           }
         }
@@ -79,30 +86,69 @@
       justify-content: flex-start;
       gap: 200px;
 
+      @include w1024-down {
+        align-items: center;
+      }
+
       > li {
         width: 500px;
         height: 300px;
 
-        > a {
+        @include w600-down {
+          height: 100%;
+        }
+
+        > .card-works {
           display: block;
           width: 100%;
           height: 100%;
-          position: relative;
-          border-radius: 20px;
-          overflow: hidden;
-          border: 2px solid rgba($black, .1);
           transform: perspective(1000px);
           transform-style: preserve-3d;
 
-          > img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
+          @include w600-down {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
           }
 
-          > ul {
+          .widget {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 10;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid rgba($black, .1);
+            transform: translateZ(0);
+
+            @include w600-down {
+              height: 300px;
+            }
+
+            > img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+            }
+
+            &:after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              display: block;
+              background-color: transparent;
+              position: absolute;
+              top: 0;
+              left: 0;
+
+              transition: background-color $ease .3s;
+            }
+          }
+
+          .tools {
             position: absolute;
             bottom: 15px;
             left: 15px;
@@ -110,7 +156,7 @@
             flex-direction: row;
             gap: 5px;
 
-            transform: translateZ(80px);
+            transform: translateZ(30px);
 
             > li {
               padding: 2px 15px;
@@ -123,8 +169,30 @@
             }
           }
 
-          > div {
+          .link {
             position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background-color: $black;
+            width: 50px;
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100px;
+            border: 2px solid rgba($white, .05);
+            transform: translateZ(30px);
+
+            transition: border-color $ease .3s;
+
+            &:hover {
+              border-color: $white;
+            }
+          }
+
+          .content {
+            position: absolute;
+            z-index: 20;
             top: 0;
             left: 0;
             width: 100%;
@@ -132,12 +200,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: transparent;
-            padding: 20px;
-            transform: translateZ(40px);
+            padding: 30px;
+            transform: translateZ(30px);
 
-            transition: background-color $ease .3s;
-            transition-delay: .15s;
+            @include w600-down {
+              position: relative;
+              top: unset;
+              left: unset;
+              height: auto;
+            }
 
             > p {
               position: relative;
@@ -151,6 +222,10 @@
               text-transform: none;
               color: $white;
 
+              @include w600-down {
+                color: $black;
+              }
+
               > .mask {
                 overflow: hidden;
                 display: inline-flex;
@@ -162,42 +237,41 @@
                   transform: translateY(100px);
 
                   transition: transform $ease .3s;
+
+                  @include w600-down {
+                    transform: translateY(0);
+                  }
                 }
               }
-            }
-
-            }
-
-          > a {
-            position: absolute;
-            bottom: 15px;
-            right: 15px;
-            background-color: $black;
-            width: 50px;
-            aspect-ratio: 1/1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 100px;
-            border: 2px solid rgba($white, .05);
-
-            transition: border-color $ease .3s;
-
-            &:hover {
-              border-color: $white;
             }
           }
 
           &:hover {
 
-            > div {
-              background-color: rgba($black, .85);
-              transition-delay: 0s;
-
-              > p > .mask > span {
-                transform: translateY(0);
-              }
+            .content p .mask span {
+              transform: translateY(0);
             }
+
+            > .widget:after {
+              background-color: rgba($black, .6);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .personal {
+
+    > ul {
+      align-items: flex-start;
+
+      > li {
+
+        > .card-works {
+
+          > .link {
+            display: none;
           }
         }
       }

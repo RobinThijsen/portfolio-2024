@@ -12,8 +12,8 @@ export const slideUpText= {
     initial: {
         y: "100%"
     },
-    open: (index: number) => ({
+    enter: (index: number) => ({
         y: 0,
-        transition: { duration: 1, delay: .05 * index, ease: [.76, 0, .24, 1] }
+        transition: { duration: 1, delay: .015 * index, ease: [.76, 0, .24, 1] }
     })
 }

@@ -1,7 +1,29 @@
 import { Magnetic } from "../Magnetic.tsx"
-import { root_url, sitename } from "../../assets/ts/config.ts"
+
+import { img_url, sitename } from "../../assets/ts/config.ts"
+
+import { useEffect, useRef } from "react"
+import { gsap } from "gsap"
 
 export const Footer = () => {
+    const firstTextRef: React.MutableRefObject<null> = useRef(null)
+    const secondTextRef: React.MutableRefObject<null> = useRef(null)
+    let xPercent: number = 0
+    let direction: number = -1
+
+    const animation = () => {
+        if (xPercent <= -107) {
+            xPercent = 0
+        }
+        gsap.set(firstTextRef.current, { xPercent: xPercent, duration: 2000 })
+        gsap.set(secondTextRef.current, { xPercent: xPercent, duration: 2000 })
+        xPercent += .1 * direction
+        requestAnimationFrame(animation)
+    }
+
+    useEffect(() => {
+        requestAnimationFrame(animation);
+    }, []);
 
     return <footer className="footer">
         <div className="linkContainer">
@@ -24,9 +46,8 @@ export const Footer = () => {
             </Magnetic>
         </div>
 
-        <div className="wrapper wrapper--small">
-            <article>
-                <img src={ root_url + "images/svg/logo-black.svg" } alt={ sitename } />
+        <article>
+                <img src={ img_url + "svg/logo-black.svg" } alt={ sitename } />
 
                 <h3>
                     Robin Thijsen
@@ -62,10 +83,21 @@ export const Footer = () => {
                     </div>
                 </div>
             </article>
-        </div>
 
-        <div className="carouselText">
+        <div className="sliderContainer">
+            <div>
+                <p ref={ firstTextRef }>
+                    Full-stack web developer
 
+                    <img src={ img_url + "svg/picto-black.svg" } alt={ sitename } />
+                </p>
+
+                <p ref={ secondTextRef }>
+                    Full-stack web developer
+
+                    <img src={ img_url + "svg/picto-black.svg" } alt={ sitename } />
+                </p>
+            </div>
         </div>
     </footer>
 }
